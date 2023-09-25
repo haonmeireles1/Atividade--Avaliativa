@@ -1,33 +1,31 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>
+#include<stdio.h>
 
 int main(){
-    double A,B,C;
+   float A,B,C;
 
-    printf("Insira aqui os valores para checar se e um triangulo,ou triangulo escaleno\ntriangulo equilatero e traingulo esosceles\n\n");
-    cout<<"Lado A"<<endl;
-    cin>>A;
-    cout<<"Lado B\n";
-    cin>>B;
-    cout<<"Lado C\n";
-    cin>>C;
+    printf("Insira aqui os valores para checar se e um triangulo,ou triangulo escaleno\ntriangulo equilatero e traingulo esosceles");
+    printf("Lado A");
+    scanf("%f", &A);
+    printf("Lado B");
+    scanf("%f", &B);
+    printf("Lado C");
+    scanf("%f", &C);
 
-    if ( (A<B+C) && (B<A+C)&&(C<A+){
-         cout<<"Os valores digitados formam um Triangulo"<<endl;
+   if ((A < B + C) && (B < A + C) && (C < A + B)) {
+        printf("Os valores digitados formam um Triangulo\n");
 
-         }
-         if ((A== && (B==C)){
-              cout<<"Os valores digitados formam um Triangulo Equilatero"<<endl;
+        if (A == B && B == C) {
+            printf("Triangulo Equilatero\n");
+        } else if (A == B || B == C || C == A) {
+            printf("Triangulo Isosceles\n");
+        } else {
+            printf("Triangulo Escaleno\n");
+        }
+    } else {
+        printf("Os valores digitados nao formam um Triangulo\n");
+    }
 
-              }
-              else if ((A== || (B==C)||(C==A)){
-                   cout<<"Os valores digitados formam um Triangulo Isosceles"<<endl;
-
-                   }
-                   else {
-                        cout<<"Os valores digitados formam um Triangulo Escaleno"<<endl;
-                        }
-                        system("pause");
-                        return 0;
+    system("pause");
+    return 0;
 }
-
