@@ -3,7 +3,7 @@
 #define TAM_VOTOS 6
 
 int main(){
-  //14 é o tamanho da maior string = número de caracteres + 1 (terminador de string \0)
+  
   char tipo_voto[][14] = {"Candidato1", "Candidato2", "Candidato3", "Candidato4", "Votos nulos", "Votos brancos"};
   int votos[TAM_VOTOS] = {0, 0, 0, 0, 0, 0};
   int i, voto;
