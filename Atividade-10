@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main() {
+    int maior = 0, menor = 0, count = 0, soma = 0, soma3 = 0, soma4 = 0;
+    char cid[100], cid2[100];
+    
+    for (int c = 1; c <= 5; c++) {
+        char cidade[100];
+        int codigo, veiculos, acidentes;
+        
+        printf("Digite o nome da cidade: ");
+        scanf("%s", cidade);
+        printf("Digite o codigo da cidade: ");
+        scanf("%d", &codigo);
+        printf("Numero de veiculos de passeio: ");
+        scanf("%d", &veiculos);
+        printf("Numero de acidentes de transito com vitimas: ");
+        scanf("%d", &acidentes);
+        
+        count++;
+        soma += veiculos;
+        double soma2 = (double)soma / count;
+        soma3 += acidentes;
+        
+        if (acidentes > maior) {
+            maior = acidentes;
+            strcpy(cid, cidade);
+        }
+        
+        if (count == 1 || acidentes < menor) {
+            menor = acidentes;
+            strcpy(cid2, cidade);
+        }
+        
+        if (veiculos < 2000) {
+            soma4 = soma3 / count;
+        }
+    }
+    
+    printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
+    printf("O menor indice de acidentes de transito %d cidade que pertence %s\n", menor, cid2);
+    printf("O maior indice de acidentes de transito %d cidade que pertence %s\n", maior, cid);
+    printf("Media de veiculos nas cinco cidades %lf\n", (double)soma2);
+    printf("Media de acidentes de transito nas cidades com menos de 2000 %d\n", soma4);
+    
+    return 0;
+}
