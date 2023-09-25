@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int x;
+    float f;
+
+    printf("Digite um valor para x para a função f(x) = 5x + 3:\n");
+    printf("                  ------                \n");
+    printf("                  √x² - 16 \n");
+    scanf("%d", &x);
+
+    if (x * x - 16 <= 0) {
+        printf("O valor de x causa um problema no cálculo da função.\n");
+    } else {
+        f = (float)(5 * x + 3) / sqrt(x * x - 16);
+        printf("O resultado da função f(x) é: %.5f\n", f);
+    }
+
+    return 0;
+}
